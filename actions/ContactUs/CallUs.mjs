@@ -1,7 +1,7 @@
 import messenger from "../../services/messenger";
 import textButton from "../../replyTemplates/textButton";
 
-import LingerieSizing from "./LingerieSizing";
+import ContactUsMenu from "./ContactUsMenu";
 
 const actionName = "CALL_US";
 const handler = (recipientId, requestPayload) => {
@@ -10,10 +10,10 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Don't stress, we'll do our best to pick up your call within 1 min!`,
+      text: `Don't stress, we'll do our best to pick up your call within 1 min! We're open Monday - Sunday 8:30 AM - 8:30 PM EST`,
       quick_replies: [     
-        textButton("Call", LingerieSizing.actionNames, {}),        
-        textButton("Hours", LingerieSizing.actionNames, {}),
+        // textButton("Call", LingerieSizing.actionNames, {}), //TODO CALL BUTTON   
+        textButton("Back", ContactUsMenu.actionNames, {}),
       ]
     }
   };
