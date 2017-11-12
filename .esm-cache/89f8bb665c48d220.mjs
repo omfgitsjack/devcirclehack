@@ -1,8 +1,8 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
-import urlButton from "../../replyTemplates/urlButton.js";
+let messenger;_5c4‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_5c4‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let urlButton;_5c4‍.w("../../replyTemplates/urlButton.js",[["default",function(v){urlButton=v}]]);let FindYourSizeMenu;_5c4‍.w("./FindYourSizeMenu",[["default",function(v){FindYourSizeMenu=v}]]);
 
-import FindYourSizeMenu from "./FindYourSizeMenu";
+
+
+
 
 const actionName = "LINGERIE_SIZING";
 const handler = (recipientId, requestPayload) => {
@@ -26,7 +26,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_5c4‍.d({
   actionName,
   handler
-};
+});

@@ -1,4 +1,4 @@
-let messenger;_4f8‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_4f8‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_4f8‍.w("../services/shopify",[["default",function(v){shopify=v}]]);
+let messenger;_791‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_791‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_791‍.w("../services/shopify",[["default",function(v){shopify=v}]]);
 
 
 
@@ -65,7 +65,7 @@ const handler = async (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_4f8‍.d({
+_791‍.d({
   actionName,
   handler
 });

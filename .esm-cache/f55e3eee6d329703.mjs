@@ -1,12 +1,12 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_6d3‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_6d3‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let BraSizing;_6d3‍.w("./BraSizing",[["default",function(v){BraSizing=v}]]);let HowToMeasure;_6d3‍.w("./HowToMeasure",[["default",function(v){HowToMeasure=v}]]);let LingerieSizing;_6d3‍.w("./LingerieSizing",[["default",function(v){LingerieSizing=v}]]);let Panties;_6d3‍.w("./Panties",[["default",function(v){Panties=v}]]);let Welcome;_6d3‍.w("../Welcome",[["default",function(v){Welcome=v}]]);
 
-import BraSizing from "./BraSizing";
-import HowToMeasure from "./HowToMeasure";
-import LingerieSizing from "./LingerieSizing";
-import Panties from "./Panties";
 
-import Welcome from "../Welcome";
+
+
+
+
+
+
 
 const actionName = "SIZING_MENU";
 const handler = (recipientId, requestPayload) => {
@@ -29,7 +29,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_6d3‍.d({
   actionName,
   handler
-};
+});

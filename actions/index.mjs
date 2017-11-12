@@ -23,10 +23,9 @@ import LingerieSizing from "./FindYourSize/LingerieSizing";
 import Panties from "./FindYourSize/Panties";
 import SlimFit from "./FindYourSize/SlimFit";
 
-import ContactUs from "./ContactUsMenu";
-import CallUs from "./CallUs";
-import LeaveMessage from "./LeaveMessage";
-
+import ContactUsMenu from "./ContactUs/ContactUsMenu";
+import CallUs from "./ContactUs/CallUs";
+import LeaveMessage from "./ContactUs/LeaveMessage";
 
 export default {
   [Welcome.actionName]: Welcome.handler,
@@ -54,5 +53,5 @@ export default {
 
   [CallUs.actionName]: CallUs.handler,
   [ContactUsMenu.actionName]: ContactUsMenu.handler,
-  [LeaveMessage.actionName]: LeaveMessage.handler,
+  [LeaveMessage.actionName]: LeaveMessage.handler
 };

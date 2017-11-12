@@ -1,7 +1,7 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_a78‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_a78‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let HowToMeasure;_a78‍.w("./HowToMeasure",[["default",function(v){HowToMeasure=v}]]);
 
-import HowToMeasure from "./HowToMeasure";
+
+
 
 const actionName = "CHEST";
 const handler = (recipientId, requestPayload) => {
@@ -17,7 +17,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_a78‍.d({
   actionName,
   handler
-};
+});

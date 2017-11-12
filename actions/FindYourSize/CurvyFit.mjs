@@ -11,9 +11,7 @@ const handler = (recipientId, requestPayload) => {
     },
     message: {
       text: `Take a look at our sizing chart!`, //TODO SHOW CHART
-      quick_replies: [     
-        textButton("Back", LingerieSizing.actionNames, {}),
-      ]
+      quick_replies: [textButton("Back", LingerieSizing.actionName, {})]
     }
   };
   messenger.callSendAPI(messageData);

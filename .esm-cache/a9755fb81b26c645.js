@@ -1,4 +1,4 @@
-module.exports = function(title, url) {
+"use script";module.exports = function(title, url) {
   return {
     type: "web_url",
     url: url,

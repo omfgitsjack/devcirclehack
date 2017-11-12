@@ -1,8 +1,8 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_8d6‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_8d6‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let ContactUsMenu;_8d6‍.w("./ContactUsMenu",[["default",function(v){ContactUsMenu=v}]]);let callButton;_8d6‍.w("../../replyTemplates/callButton.js",[["default",function(v){callButton=v}]]);
 
-import ContactUsMenu from "./ContactUsMenu";
-import callButton from "../../replyTemplates/callButton.js";
+
+
+
 
 const actionName = "CALL_US";
 const handler = (recipientId, requestPayload) => {
@@ -26,7 +26,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_8d6‍.d({
   actionName,
   handler
-};
+});

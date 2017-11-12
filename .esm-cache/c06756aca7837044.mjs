@@ -1,8 +1,8 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_a78‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_a78‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let CallUs;_a78‍.w("./CallUs",[["default",function(v){CallUs=v}]]);let LeaveMessage;_a78‍.w("./LeaveMessage",[["default",function(v){LeaveMessage=v}]]);
 
-import CallUs from "./CallUs";
-import LeaveMessage from "./LeaveMessage";
+
+
+
 
 const actionName = "CONTACT_US_MENU";
 const handler = (recipientId, requestPayload) => {
@@ -21,7 +21,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_a78‍.d({
   actionName,
   handler
-};
+});
