@@ -5,6 +5,8 @@ import GetProductCategories from "./GetProductCategories";
 import GetShipping from "./Shipping/GetShipping";
 import GetReturns from "./Returns/GetReturns";
 import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
+import FindYourSize from "./FindYourSize";
+import ContactUs from "./ContactUs"
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {

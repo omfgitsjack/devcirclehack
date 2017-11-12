@@ -10,9 +10,8 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Don't stress, we'll do our best to pick up your call within 1 min! We're open Monday - Sunday 8:30 AM - 8:30 PM EST`,
+      text: `Leave a message and we'll get back to you as soon as we can!`,
       quick_replies: [     
-        // textButton("Call", LingerieSizing.actionNames, {}), //TODO CALL BUTTON   
         textButton("Back", ContactUsMenu.actionNames, {}),
       ]
     }

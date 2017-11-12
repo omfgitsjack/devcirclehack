@@ -13,7 +13,7 @@ const handler = (recipientId, requestPayload) => {
       text: `Find lingerie that fits right just for you!`, //TODO SHOW CHART
       quick_replies: [
         textButton("Slim Fit", SlimFit.actionName, {}),
-        textButton("Curvey Fit", CurveyFit.actionName, {}),        
+        textButton("Curvy Fit", CurvyFit.actionName, {}),        
         textButton("Back", FindYourSizeMenu.actionNames, {}),
       ]
     }
