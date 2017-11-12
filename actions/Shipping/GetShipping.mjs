@@ -1,5 +1,8 @@
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
+import messenger from "../../services/messenger";
+import textButton from "../../replyTemplates/textButton";
+import urlButton from "../../replyTemplates/urlButton";
+
+import Welcome from "../Welcome";
 
 import AmericanRates from "./AmericanRates";
 import CanadianRates from "./CanadianRates";
@@ -14,9 +17,9 @@ const handler = (recipientId, requestPayload) => {
       text: `We offer flat rate shipping! What best describes what you're looking for?`,
       quick_replies: [
         textButton("US Rates", AmericanRates.actionName, {}),
-        textButton("Candian Rates", CanadianRates.actionName, {}),
-        urlButton("Learn more", "https://candyboxx.com/pages/faq", {}),        
-        // textButton("Go Back",)
+        textButton("Canadian Rates", CanadianRates.actionName, {}),
+        // urlButton("Learn more", "https://candyboxx.com/pages/faq", {})
+        textButton("Home", Welcome.actionName, {})
       ]
     }
   };
