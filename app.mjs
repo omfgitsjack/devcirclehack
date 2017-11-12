@@ -22,6 +22,19 @@ import WelcomeAction from "./actions/Welcome";
 import registeredActions from "./actions";
 
 import wit from "./services/wit";
+// import products from "./services/products";
+
+// const getData = async () => {
+//   const { dProductType } = await products.getProducts();
+
+//   const copy = { ...dProductType };
+//   for (let key in copy) {
+//     copy[key] = copy[key].length;
+//   }
+//   console.log("copy");
+//   console.log(copy);
+// };
+// getData();
 
 const callSendAPI = messenger.callSendAPI;
 const callSendProfile = messenger.callSendProfile;
@@ -235,12 +248,12 @@ async function receivedMessage(event) {
 
       default:
         // otherwise, just echo it back to the sender
-        try {
-          const response = await wit.message(messageText, {});
-          console.log(response.entities);
-        } catch (err) {
-          console.log(err);
-        }
+        // try {
+        //   const response = await wit.message(messageText, {});
+        //   console.log(response.entities);
+        // } catch (err) {
+        //   console.log(err);
+        // }
         sendTextMessage(senderID, messageText);
     }
   }
@@ -412,6 +425,7 @@ async function respondToHelpRequestWithTemplates(
 
       break;
     default:
+      console.log("Processing: ", requestPayload.action);
       const validActions = new Set(Object.keys(registeredActions));
 
       if (validActions.has(requestPayload.action)) {

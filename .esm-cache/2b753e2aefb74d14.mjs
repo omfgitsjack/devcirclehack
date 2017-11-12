@@ -1,4 +1,4 @@
-let bodyParser;_7c0‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_7c0‍.w("config",[["default",function(v){config=v}]]);let crypto;_7c0‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_7c0‍.w("express",[["default",function(v){express=v}]]);let https;_7c0‍.w("https",[["default",function(v){https=v}]]);let request;_7c0‍.w("request",[["default",function(v){request=v}]]);let shopify;_7c0‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_7c0‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_7c0‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_7c0‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_7c0‍.w("./services/wit",[["default",function(v){wit=v}]]);/*
+let bodyParser;_efb‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_efb‍.w("config",[["default",function(v){config=v}]]);let crypto;_efb‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_efb‍.w("express",[["default",function(v){express=v}]]);let https;_efb‍.w("https",[["default",function(v){https=v}]]);let request;_efb‍.w("request",[["default",function(v){request=v}]]);let shopify;_efb‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_efb‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_efb‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_efb‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_efb‍.w("./services/wit",[["default",function(v){wit=v}]]);/*
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -22,6 +22,19 @@ let bodyParser;_7c0‍.w("body-parser",[["default",function(v){bodyParser=v}]]);
 
 
 
+// import products from "./services/products";
+
+// const getData = async () => {
+//   const { dProductType } = await products.getProducts();
+
+//   const copy = { ...dProductType };
+//   for (let key in copy) {
+//     copy[key] = copy[key].length;
+//   }
+//   console.log("copy");
+//   console.log(copy);
+// };
+// getData();
 
 const callSendAPI = messenger.callSendAPI;
 const callSendProfile = messenger.callSendProfile;
@@ -235,12 +248,12 @@ async function receivedMessage(event) {
 
       default:
         // otherwise, just echo it back to the sender
-        try {
-          const response = await wit.message(messageText, {});
-          console.log(response.entities);
-        } catch (err) {
-          console.log(err);
-        }
+        // try {
+        //   const response = await wit.message(messageText, {});
+        //   console.log(response.entities);
+        // } catch (err) {
+        //   console.log(err);
+        // }
         sendTextMessage(senderID, messageText);
     }
   }
@@ -412,6 +425,7 @@ async function respondToHelpRequestWithTemplates(
 
       break;
     default:
+      console.log("Processing: ", requestPayload.action);
       const validActions = new Set(Object.keys(registeredActions));
 
       if (validActions.has(requestPayload.action)) {
@@ -510,4 +524,4 @@ app.listen(app.get("port"), function() {
   callSendProfile();
 });
 
-_7c0‍.d(app);
+_efb‍.d(app);

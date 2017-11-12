@@ -1,10 +1,10 @@
-import TellJokeActionName from "./TellJoke";
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import GetProductCategories from "./GetProductCategories";
-import GetShipping from "./Shipping/GetShipping";
-import GetReturns from "./Returns/GetReturns";
-import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
+let TellJokeActionName;_ba6‍.w("./TellJoke",[["default",function(v){TellJokeActionName=v}]]);let messenger;_ba6‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_ba6‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let GetProductCategories;_ba6‍.w("./GetProductCategories",[["default",function(v){GetProductCategories=v}]]);let GetShipping;_ba6‍.w("./Shipping/GetShipping",[["default",function(v){GetShipping=v}]]);let GetReturns;_ba6‍.w("./Returns/GetReturns",[["default",function(v){GetReturns=v}]]);let GetMenOrFemaleProducts;_ba6‍.w("./GetMenOrFemaleProducts",[["default",function(v){GetMenOrFemaleProducts=v}]]);
+
+
+
+
+
+
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {
@@ -34,7 +34,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_ba6‍.d({
   actionName,
   handler
-};
+});

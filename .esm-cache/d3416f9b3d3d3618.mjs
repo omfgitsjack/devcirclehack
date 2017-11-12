@@ -1,10 +1,10 @@
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import shopify from "../services/shopify";
-import GetProductType from "./GetProductType";
-import Welcome from "./Welcome";
-import BOT_NAME from "../BOT_NAME";
-import { getUserSettings, setUserSettings } from "../services/userData";
+let messenger;_3d3‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_3d3‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_3d3‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_3d3‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_3d3‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_3d3‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_3d3‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);
+
+
+
+
+
+
 
 // import { getProducts } from "../services/products";
 
@@ -43,7 +43,7 @@ const handler = async (recipientId, requestPayload) => {
   }
 };
 
-export default {
+_3d3‍.d({
   actionName,
   handler
-};
+});
