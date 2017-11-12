@@ -1,6 +1,6 @@
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import shopify from "../services/shopify";
+let messenger;_f94‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_f94‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_f94‍.w("../services/shopify",[["default",function(v){shopify=v}]]);
+
+
 
 const extractData = async () => {
   const productCategories = await shopify.product.list({ limit: 120 });
@@ -63,7 +63,7 @@ const handler = async (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_f94‍.d({
   actionName,
   handler
-};
+});

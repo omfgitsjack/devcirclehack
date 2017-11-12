@@ -1,4 +1,4 @@
-/*
+let bodyParser;_f94‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_f94‍.w("config",[["default",function(v){config=v}]]);let crypto;_f94‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_f94‍.w("express",[["default",function(v){express=v}]]);let https;_f94‍.w("https",[["default",function(v){https=v}]]);let request;_f94‍.w("request",[["default",function(v){request=v}]]);let shopify;_f94‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_f94‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_f94‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_f94‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_f94‍.w("./services/wit",[["default",function(v){wit=v}]]);let products;_f94‍.w("./services/products",[["default",function(v){products=v}]]);let _;_f94‍.w("lodash",[["default",function(v){_=v}]]);/*
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -9,22 +9,22 @@
 
 /* jshint node: true, devel: true */
 
-import bodyParser from "body-parser";
-import config from "config";
-import crypto from "crypto";
-import express from "express";
-import https from "https";
-import request from "request";
-import shopify from "./services/shopify";
-import messenger from "./services/messenger";
 
-import WelcomeAction from "./actions/Welcome";
-import registeredActions from "./actions";
 
-import wit from "./services/wit";
-import products from "./services/products";
 
-import _ from "lodash";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const getData = async () => {
   const productTypes = await products.getPopularProductTypes();
@@ -524,4 +524,4 @@ app.listen(app.get("port"), function() {
   callSendProfile();
 });
 
-export default app;
+_f94‍.d(app);

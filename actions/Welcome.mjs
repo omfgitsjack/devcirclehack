@@ -24,9 +24,9 @@ const handler = (recipientId, requestPayload) => {
         ),
         // textButton("Get 3 products", "QR_GET_PRODUCT_LIST", { limit: 3 }),
         // textButton("Tell me a joke", TellJokeActionName.actionName, {}),
+        textButton("Find a product", GetMenOrFemaleProducts.actionName, {}),
         textButton("Shipping", GetShipping.actionName, {}),
         textButton("Returns & Exchanges", GetReturns.actionName, {}),
-        textButton("Find a product", GetMenOrFemaleProducts.actionName, {}),
         textButton("Find your size", FindYourSizeMenu.actionName, {}),
         textButton("Contact Us", ContactUsMenu.actionName, {})
 
