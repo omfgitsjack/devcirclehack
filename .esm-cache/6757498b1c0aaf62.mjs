@@ -1,16 +1,16 @@
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import shopify from "../services/shopify";
-import GetProductType from "./GetProductType";
-import Welcome from "./Welcome";
-import BOT_NAME from "../BOT_NAME";
-import { getUserSettings, setUserSettings } from "../services/userData";
+let messenger;_1c0‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_1c0‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_1c0‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_1c0‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_1c0‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_1c0‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_1c0‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let products;_1c0‍.w("../services/products",[["default",function(v){products=v}]]);let _;_1c0‍.w("lodash",[["default",function(v){_=v}]]);let config;_1c0‍.w("config",[["default",function(v){config=v}]]);let sectionButton;_1c0‍.w("../replyTemplates/sectionButton",[["default",function(v){sectionButton=v}]]);
 
-import products from "../services/products";
-import _ from "lodash";
-import config from "config";
 
-import sectionButton from "../replyTemplates/sectionButton";
+
+
+
+
+
+
+
+
+
+
 
 const HOST_URL = process.env.HOST_URL
   ? process.env.HOST_URL
@@ -117,7 +117,7 @@ const handler = async (recipientId, requestPayload) => {
   }
 };
 
-export default {
+_1c0‍.d({
   actionName,
   handler
-};
+});

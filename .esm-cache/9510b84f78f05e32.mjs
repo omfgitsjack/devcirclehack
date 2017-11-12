@@ -1,4 +1,4 @@
-let shopify;_96e‍.w("./shopify",[["default",function(v){shopify=v}]]);
+let shopify;_78f‍.w("./shopify",[["default",function(v){shopify=v}]]);
 
 let products = null;
 let dTags = {};
@@ -63,6 +63,12 @@ const getProductTypeCount = async () => {
   return productTypeCount;
 };
 
+const getProductIdsByProductType = async productType => {
+  const { dProductType } = await getProducts();
+
+  return dProductType[productType];
+};
+
 const getPopularProductTypes = async prefix => {
   const productTypeCount = await getProductTypeCount();
 
@@ -96,8 +102,9 @@ const getProducts = async () => {
   };
 };
 
-_96e‍.d({
+_78f‍.d({
   getProducts,
   getProductTypeCount,
-  getPopularProductTypes
+  getPopularProductTypes,
+  getProductIdsByProductType
 });

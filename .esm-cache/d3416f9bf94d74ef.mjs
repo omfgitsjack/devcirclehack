@@ -1,4 +1,4 @@
-let messenger;_918‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_918‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_918‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_918‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_918‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_918‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_918‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let NarrowProductType;_918‍.w("./NarrowProductType",[["default",function(v){NarrowProductType=v}]]);let products;_918‍.w("../services/products",[["default",function(v){products=v}]]);let _;_918‍.w("lodash",[["default",function(v){_=v}]]);
+let messenger;_f94‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_f94‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_f94‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_f94‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_f94‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_f94‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_f94‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let NarrowProductType;_f94‍.w("./NarrowProductType",[["default",function(v){NarrowProductType=v}]]);let products;_f94‍.w("../services/products",[["default",function(v){products=v}]]);let _;_f94‍.w("lodash",[["default",function(v){_=v}]]);
 
 
 
@@ -54,7 +54,7 @@ const handler = async (recipientId, requestPayload) => {
   }
 };
 
-_918‍.d({
+_f94‍.d({
   actionName,
   handler
 });

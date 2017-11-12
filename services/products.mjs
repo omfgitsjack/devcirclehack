@@ -63,6 +63,12 @@ const getProductTypeCount = async () => {
   return productTypeCount;
 };
 
+const getProductIdsByProductType = async productType => {
+  const { dProductType } = await getProducts();
+
+  return dProductType[productType];
+};
+
 const getPopularProductTypes = async prefix => {
   const productTypeCount = await getProductTypeCount();
 
@@ -99,5 +105,6 @@ const getProducts = async () => {
 export default {
   getProducts,
   getProductTypeCount,
-  getPopularProductTypes
+  getPopularProductTypes,
+  getProductIdsByProductType
 };
