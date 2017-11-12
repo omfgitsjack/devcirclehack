@@ -1,4 +1,4 @@
-let messenger;_6d3‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_6d3‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let BraSizing;_6d3‍.w("./BraSizing",[["default",function(v){BraSizing=v}]]);let HowToMeasure;_6d3‍.w("./HowToMeasure",[["default",function(v){HowToMeasure=v}]]);let LingerieSizing;_6d3‍.w("./LingerieSizing",[["default",function(v){LingerieSizing=v}]]);let Panties;_6d3‍.w("./Panties",[["default",function(v){Panties=v}]]);let Welcome;_6d3‍.w("../Welcome",[["default",function(v){Welcome=v}]]);
+let messenger;_135‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_135‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let BraSizing;_135‍.w("./BraSizing",[["default",function(v){BraSizing=v}]]);let HowToMeasure;_135‍.w("./HowToMeasure",[["default",function(v){HowToMeasure=v}]]);let LingerieSizing;_135‍.w("./LingerieSizing",[["default",function(v){LingerieSizing=v}]]);let Panties;_135‍.w("./Panties",[["default",function(v){Panties=v}]]);let Welcome;_135‍.w("../Welcome",[["default",function(v){Welcome=v}]]);
 
 
 
@@ -29,7 +29,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_6d3‍.d({
+_135‍.d({
   actionName,
   handler
 });

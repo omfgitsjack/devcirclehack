@@ -1,4 +1,4 @@
-let bodyParser;_791‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_791‍.w("config",[["default",function(v){config=v}]]);let crypto;_791‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_791‍.w("express",[["default",function(v){express=v}]]);let https;_791‍.w("https",[["default",function(v){https=v}]]);let request;_791‍.w("request",[["default",function(v){request=v}]]);let shopify;_791‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_791‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_791‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_791‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_791‍.w("./services/wit",[["default",function(v){wit=v}]]);/*
+let bodyParser;_4b8‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_4b8‍.w("config",[["default",function(v){config=v}]]);let crypto;_4b8‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_4b8‍.w("express",[["default",function(v){express=v}]]);let https;_4b8‍.w("https",[["default",function(v){https=v}]]);let request;_4b8‍.w("request",[["default",function(v){request=v}]]);let shopify;_4b8‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_4b8‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_4b8‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_4b8‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_4b8‍.w("./services/wit",[["default",function(v){wit=v}]]);let products;_4b8‍.w("./services/products",[["default",function(v){products=v}]]);let _;_4b8‍.w("lodash",[["default",function(v){_=v}]]);/*
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -22,6 +22,19 @@ let bodyParser;_791‍.w("body-parser",[["default",function(v){bodyParser=v}]]);
 
 
 
+
+
+
+
+const getData = async () => {
+  const productTypes = await products.getPopularProductTypes();
+  console.log(productTypes);
+  const extractFirstLevel = type => type.split(" - ")[0];
+  const categories = _.uniq(productTypes.map(extractFirstLevel));
+
+  console.log(categories);
+};
+// getData();
 
 const callSendAPI = messenger.callSendAPI;
 const callSendProfile = messenger.callSendProfile;
@@ -235,12 +248,12 @@ async function receivedMessage(event) {
 
       default:
         // otherwise, just echo it back to the sender
-        try {
-          const response = await wit.message(messageText, {});
-          console.log(response.entities);
-        } catch (err) {
-          console.log(err);
-        }
+        // try {
+        //   const response = await wit.message(messageText, {});
+        //   console.log(response.entities);
+        // } catch (err) {
+        //   console.log(err);
+        // }
         sendTextMessage(senderID, messageText);
     }
   }
@@ -412,6 +425,7 @@ async function respondToHelpRequestWithTemplates(
 
       break;
     default:
+      console.log("Processing: ", requestPayload.action);
       const validActions = new Set(Object.keys(registeredActions));
 
       if (validActions.has(requestPayload.action)) {
@@ -510,4 +524,4 @@ app.listen(app.get("port"), function() {
   callSendProfile();
 });
 
-_791‍.d(app);
+_4b8‍.d(app);

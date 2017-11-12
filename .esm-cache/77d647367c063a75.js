@@ -1,8 +1,8 @@
-module.exports = function(title, action, options) {
+"use script";module.exports = function(title, action, options) {
     var payload = options | {};
     payload = Object.assign(options, {action: action});
     return {
-      "content_type":"text",
+      type: 'postback',
       title: title,
       payload: JSON.stringify(payload)
     };

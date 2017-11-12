@@ -1,4 +1,4 @@
-let messenger;_5c4‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_5c4‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let urlButton;_5c4‍.w("../../replyTemplates/urlButton.js",[["default",function(v){urlButton=v}]]);let FindYourSizeMenu;_5c4‍.w("./FindYourSizeMenu",[["default",function(v){FindYourSizeMenu=v}]]);
+let messenger;_135‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_135‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let urlButton;_135‍.w("../../replyTemplates/urlButton.js",[["default",function(v){urlButton=v}]]);let FindYourSizeMenu;_135‍.w("./FindYourSizeMenu",[["default",function(v){FindYourSizeMenu=v}]]);
 
 
 
@@ -26,7 +26,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_5c4‍.d({
+_135‍.d({
   actionName,
   handler
 });

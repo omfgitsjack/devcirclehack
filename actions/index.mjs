@@ -1,9 +1,11 @@
 import Welcome from "./Welcome";
 import MainMenu from "./MainMenu";
 import TellJoke from "./TellJoke";
+
 import GetProductCategories from "./GetProductCategories";
 import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
 import GetProductType from "./GetProductType";
+import NarrowProductType from "./NarrowProductType";
 
 import GetShipping from "./Shipping/GetShipping";
 import CanadianRates from "./Shipping/CanadianRates";
@@ -38,6 +40,7 @@ export default {
   [GetProductType.actionName]: GetProductType.handler,
   [GetShipping.actionName]: GetShipping.handler,
   [GetReturns.actionName]: GetReturns.handler,
+  [NarrowProductType.actionName]: NarrowProductType.handler,
   [CanadianRates.actionName]: CanadianRates.handler,
   [AmericanRates.actionName]: AmericanRates.handler,
   [Refunds.actionName]: Refunds.handler,
