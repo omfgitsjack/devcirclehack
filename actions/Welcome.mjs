@@ -4,6 +4,7 @@ import textButton from "../replyTemplates/textButton";
 import GetProductCategories from "./GetProductCategories";
 import GetShipping from "./Shipping/GetShipping";
 import GetReturns from "./Returns/GetReturns";
+import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {
@@ -22,7 +23,8 @@ const handler = (recipientId, requestPayload) => {
         textButton("Get 3 products", "QR_GET_PRODUCT_LIST", { limit: 3 }),
         textButton("Tell me a joke", TellJokeActionName.actionName, {}),
         textButton("Shipping", GetShipping.actionName, {}),
-        textButton("Returns & Exchanges", GetReturns.actionName, {})
+        textButton("Returns & Exchanges", GetReturns.actionName, {}),
+        textButton("Find a product", GetMenOrFemaleProducts.actionName, {})
       ]
     }
   };
