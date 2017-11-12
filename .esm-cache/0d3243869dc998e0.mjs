@@ -1,4 +1,4 @@
-let messenger;_135‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_135‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let FindYourSizeMenu;_135‍.w("./FindYourSizeMenu",[["default",function(v){FindYourSizeMenu=v}]]);
+let messenger;_9dc‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_9dc‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let FindYourSizeMenu;_9dc‍.w("./FindYourSizeMenu",[["default",function(v){FindYourSizeMenu=v}]]);
 
 
 
@@ -10,7 +10,7 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Find lingerie that fits right just for you!`, //TODO SHOW CHART
+      text: `Find lingerie that fits right just for you!`,
       quick_replies: [
         textButton("Slim Fit", SlimFit.actionName, {}),
         textButton("Curvy Fit", CurvyFit.actionName, {}),
@@ -21,7 +21,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_135‍.d({
+_9dc‍.d({
   actionName,
   handler
 });

@@ -1,11 +1,11 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
-import urlButton from "../../replyTemplates/urlButton";
+let messenger;_894‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_894‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let urlButton;_894‍.w("../../replyTemplates/urlButton",[["default",function(v){urlButton=v}]]);let ReturnProcess;_894‍.w("./ReturnProcess",[["default",function(v){ReturnProcess=v}]]);let Refunds;_894‍.w("./Refunds",[["default",function(v){Refunds=v}]]);let Welcome;_894‍.w("../Welcome",[["default",function(v){Welcome=v}]]);
 
-import ReturnProcess from "./ReturnProcess";
-import Refunds from "./Refunds";
 
-import Welcome from "../Welcome";
+
+
+
+
+
 
 const actionName = "RETURNS";
 const handler = (recipientId, requestPayload) => {
@@ -32,7 +32,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_894‍.d({
   actionName,
   handler
-};
+});

@@ -1,4 +1,4 @@
-let messenger;_4b8‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_4b8‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_4b8‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_4b8‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_4b8‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_4b8‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_4b8‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let products;_4b8‍.w("../services/products",[["default",function(v){products=v}]]);let _;_4b8‍.w("lodash",[["default",function(v){_=v}]]);let config;_4b8‍.w("config",[["default",function(v){config=v}]]);let sectionButton;_4b8‍.w("../replyTemplates/sectionButton",[["default",function(v){sectionButton=v}]]);
+let messenger;_33a‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_33a‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_33a‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_33a‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_33a‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_33a‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_33a‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let products;_33a‍.w("../services/products",[["default",function(v){products=v}]]);let _;_33a‍.w("lodash",[["default",function(v){_=v}]]);let config;_33a‍.w("config",[["default",function(v){config=v}]]);let sectionButton;_33a‍.w("../replyTemplates/sectionButton",[["default",function(v){sectionButton=v}]]);
 
 
 
@@ -117,7 +117,7 @@ const handler = async (recipientId, requestPayload) => {
   }
 };
 
-_4b8‍.d({
+_33a‍.d({
   actionName,
   handler
 });
