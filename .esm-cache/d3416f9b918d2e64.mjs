@@ -1,14 +1,14 @@
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import shopify from "../services/shopify";
-import GetProductType from "./GetProductType";
-import Welcome from "./Welcome";
-import BOT_NAME from "../BOT_NAME";
-import { getUserSettings, setUserSettings } from "../services/userData";
-import NarrowProductType from "./NarrowProductType";
+let messenger;_918‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_918‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_918‍.w("../services/shopify",[["default",function(v){shopify=v}]]);let GetProductType;_918‍.w("./GetProductType",[["default",function(v){GetProductType=v}]]);let Welcome;_918‍.w("./Welcome",[["default",function(v){Welcome=v}]]);let BOT_NAME;_918‍.w("../BOT_NAME",[["default",function(v){BOT_NAME=v}]]);let getUserSettings,setUserSettings;_918‍.w("../services/userData",[["getUserSettings",function(v){getUserSettings=v}],["setUserSettings",function(v){setUserSettings=v}]]);let NarrowProductType;_918‍.w("./NarrowProductType",[["default",function(v){NarrowProductType=v}]]);let products;_918‍.w("../services/products",[["default",function(v){products=v}]]);let _;_918‍.w("lodash",[["default",function(v){_=v}]]);
 
-import products from "../services/products";
-import _ from "lodash";
+
+
+
+
+
+
+
+
+
 
 const actionName = "GetProductType";
 const handler = async (recipientId, requestPayload) => {
@@ -54,7 +54,7 @@ const handler = async (recipientId, requestPayload) => {
   }
 };
 
-export default {
+_918‍.d({
   actionName,
   handler
-};
+});

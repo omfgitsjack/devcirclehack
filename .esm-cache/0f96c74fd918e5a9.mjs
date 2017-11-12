@@ -1,4 +1,4 @@
-let TellJokeActionName;_ba6‍.w("./TellJoke",[["default",function(v){TellJokeActionName=v}]]);let messenger;_ba6‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_ba6‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let GetProductCategories;_ba6‍.w("./GetProductCategories",[["default",function(v){GetProductCategories=v}]]);let GetShipping;_ba6‍.w("./Shipping/GetShipping",[["default",function(v){GetShipping=v}]]);let GetReturns;_ba6‍.w("./Returns/GetReturns",[["default",function(v){GetReturns=v}]]);let GetMenOrFemaleProducts;_ba6‍.w("./GetMenOrFemaleProducts",[["default",function(v){GetMenOrFemaleProducts=v}]]);
+let TellJokeActionName;_d91‍.w("./TellJoke",[["default",function(v){TellJokeActionName=v}]]);let messenger;_d91‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_d91‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let GetProductCategories;_d91‍.w("./GetProductCategories",[["default",function(v){GetProductCategories=v}]]);let GetShipping;_d91‍.w("./Shipping/GetShipping",[["default",function(v){GetShipping=v}]]);let GetReturns;_d91‍.w("./Returns/GetReturns",[["default",function(v){GetReturns=v}]]);let GetMenOrFemaleProducts;_d91‍.w("./GetMenOrFemaleProducts",[["default",function(v){GetMenOrFemaleProducts=v}]]);
 
 
 
@@ -34,7 +34,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_ba6‍.d({
+_d91‍.d({
   actionName,
   handler
 });

@@ -22,18 +22,18 @@ import WelcomeAction from "./actions/Welcome";
 import registeredActions from "./actions";
 
 import wit from "./services/wit";
-// import products from "./services/products";
+import products from "./services/products";
 
-// const getData = async () => {
-//   const { dProductType } = await products.getProducts();
+import _ from "lodash";
 
-//   const copy = { ...dProductType };
-//   for (let key in copy) {
-//     copy[key] = copy[key].length;
-//   }
-//   console.log("copy");
-//   console.log(copy);
-// };
+const getData = async () => {
+  const productTypes = await products.getPopularProductTypes();
+  console.log(productTypes);
+  const extractFirstLevel = type => type.split(" - ")[0];
+  const categories = _.uniq(productTypes.map(extractFirstLevel));
+
+  console.log(categories);
+};
 // getData();
 
 const callSendAPI = messenger.callSendAPI;

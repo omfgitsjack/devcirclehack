@@ -3,6 +3,7 @@ import shopify from "./shopify";
 let products = null;
 let dTags = {};
 let dProductType = {};
+let productTypeCount = null;
 
 const filterProductType = productType => {
   const keys = productType
@@ -48,14 +49,39 @@ const extractData = async () => {
 };
 
 const getProductTypeCount = async () => {
-  const { dProductType } = await getProducts();
+  if (!productTypeCount) {
+    const { dProductType } = await getProducts();
 
-  const copy = { ...dProductType };
-  for (let key in copy) {
-    copy[key] = copy[key].length;
+    const copy = { ...dProductType };
+    for (let key in copy) {
+      copy[key] = copy[key].length;
+    }
+
+    productTypeCount = copy;
   }
 
-  return copy;
+  return productTypeCount;
+};
+
+const getPopularProductTypes = async prefix => {
+  const productTypeCount = await getProductTypeCount();
+
+  const popularTypes = Object.entries(productTypeCount)
+    .filter(([key, count]) => {
+      if (prefix) {
+        return key.startsWith(prefix);
+      } else {
+        return true; // if no prefix we want to return everything
+      }
+    })
+    .sort((a, b) => {
+      // sort by popularity
+      return b[1] - a[1];
+    })
+    .map(entry => entry[0]);
+  // .map(key => key.split(prefix)[1]); // Grab the new unique product type key
+
+  return popularTypes;
 };
 
 const getProducts = async () => {
@@ -71,5 +97,7 @@ const getProducts = async () => {
 };
 
 export default {
-  getProducts
+  getProducts,
+  getProductTypeCount,
+  getPopularProductTypes
 };

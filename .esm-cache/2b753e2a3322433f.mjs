@@ -1,4 +1,4 @@
-let bodyParser;_efb‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_efb‍.w("config",[["default",function(v){config=v}]]);let crypto;_efb‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_efb‍.w("express",[["default",function(v){express=v}]]);let https;_efb‍.w("https",[["default",function(v){https=v}]]);let request;_efb‍.w("request",[["default",function(v){request=v}]]);let shopify;_efb‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_efb‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_efb‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_efb‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_efb‍.w("./services/wit",[["default",function(v){wit=v}]]);/*
+let bodyParser;_332‍.w("body-parser",[["default",function(v){bodyParser=v}]]);let config;_332‍.w("config",[["default",function(v){config=v}]]);let crypto;_332‍.w("crypto",[["default",function(v){crypto=v}]]);let express;_332‍.w("express",[["default",function(v){express=v}]]);let https;_332‍.w("https",[["default",function(v){https=v}]]);let request;_332‍.w("request",[["default",function(v){request=v}]]);let shopify;_332‍.w("./services/shopify",[["default",function(v){shopify=v}]]);let messenger;_332‍.w("./services/messenger",[["default",function(v){messenger=v}]]);let WelcomeAction;_332‍.w("./actions/Welcome",[["default",function(v){WelcomeAction=v}]]);let registeredActions;_332‍.w("./actions",[["default",function(v){registeredActions=v}]]);let wit;_332‍.w("./services/wit",[["default",function(v){wit=v}]]);let products;_332‍.w("./services/products",[["default",function(v){products=v}]]);let _;_332‍.w("lodash",[["default",function(v){_=v}]]);/*
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -22,18 +22,18 @@ let bodyParser;_efb‍.w("body-parser",[["default",function(v){bodyParser=v}]]);
 
 
 
-// import products from "./services/products";
 
-// const getData = async () => {
-//   const { dProductType } = await products.getProducts();
 
-//   const copy = { ...dProductType };
-//   for (let key in copy) {
-//     copy[key] = copy[key].length;
-//   }
-//   console.log("copy");
-//   console.log(copy);
-// };
+
+
+const getData = async () => {
+  const productTypes = await products.getPopularProductTypes();
+  console.log(productTypes);
+  const extractFirstLevel = type => type.split(" - ")[0];
+  const categories = _.uniq(productTypes.map(extractFirstLevel));
+
+  console.log(categories);
+};
 // getData();
 
 const callSendAPI = messenger.callSendAPI;
@@ -524,4 +524,4 @@ app.listen(app.get("port"), function() {
   callSendProfile();
 });
 
-_efb‍.d(app);
+_332‍.d(app);
