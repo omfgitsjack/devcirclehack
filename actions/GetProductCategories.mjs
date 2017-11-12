@@ -2,15 +2,49 @@ import messenger from "../services/messenger";
 import textButton from "../replyTemplates/textButton";
 import shopify from "../services/shopify";
 
-const extractData = product => {
-  product;
+const extractData = async () => {
+  const productCategories = await shopify.product.list({ limit: 120 });
+  let dTags = {
+  }
+
+  let dProductType = {
+  }
+
+  let parsedProducts = productCategories.map(product => {
+    return {
+      id: product.id,
+      tags: product.tags.split(', '),
+      productType: product.product_type
+    }
+  })
+
+  parsedProducts.forEach(product => {
+    product.tags.forEach(tag => {
+      if (dTags[tag]) {
+        dTags[tag].push(product.id)
+      } else {
+        dTags[tag] = [product.id]
+      }
+    })
+
+    if (dProductType[product.productType]) {
+      dProductType[product.productType].push(product.id)
+    } else {
+      dProductType[product.productType] = [product.id]
+    }
+  })
+
+  // console.log(dProductType);
+  console.log(dTags)
 };
+
+extractData()
 
 const actionName = "GetProductCategories";
 const handler = async (recipientId, requestPayload) => {
   console.log("searchin for data");
 
-  const productCategories = await shopify.product.list({ limit: 10 });
+  const productCategories = await shopify.product.list({ limit: 120 });
   console.log("productCategories");
   console.log(productCategories);
 
