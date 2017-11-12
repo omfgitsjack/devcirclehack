@@ -11,7 +11,7 @@ const handler = (recipientId, requestPayload) => {
     },
     message: {
       text: `Leave a message and we'll get back to you as soon as we can!`,
-      quick_replies: [textButton("Back", ContactUsMenu.actionName, {})]
+      quick_replies: [textButton("Go Back", ContactUsMenu.actionName, {})]
     }
   };
   messenger.callSendAPI(messageData);

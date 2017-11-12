@@ -18,7 +18,7 @@ const handler = (recipientId, requestPayload) => {
         textButton("Bust", Bust.actionName, {}),
         textButton("Chest", Chest.actionName, {}),
         textButton("Hips", Hips.actionName, {}),
-        textButton("Back", FindYourSizeMenu.actionName, {}) //FIX
+        textButton("Go Back", FindYourSizeMenu.actionName, {}) //FIX
       ]
     }
   };

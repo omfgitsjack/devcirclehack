@@ -12,7 +12,7 @@ const handler = (recipientId, requestPayload) => {
     message: {
       text: `Measure loosely around the fullest part of your bust (usually over the nipples), keeping the tape measure straight all the way around your body.`,
       quick_replies: [
-        textButton("Back", HowToMeasure.actionName, {}) //FIX
+        textButton("Go Back", HowToMeasure.actionName, {}) //FIX
       ]
     }
   };

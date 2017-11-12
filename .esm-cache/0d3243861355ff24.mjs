@@ -14,7 +14,7 @@ const handler = (recipientId, requestPayload) => {
       quick_replies: [
         textButton("Slim Fit", SlimFit.actionName, {}),
         textButton("Curvy Fit", CurvyFit.actionName, {}),
-        textButton("Back", FindYourSizeMenu.actionName, {})
+        textButton("Go Back", FindYourSizeMenu.actionName, {})
       ]
     }
   };

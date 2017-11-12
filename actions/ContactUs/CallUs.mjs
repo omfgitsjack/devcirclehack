@@ -17,7 +17,8 @@ const handler = (recipientId, requestPayload) => {
           template_type: "button",
           text: `Don't stress, we'll do our best to pick up your call within 1 min! We're open Monday - Sunday 8:30 AM - 8:30 PM EST`,
           buttons: [
-            callButton("Call", "+16478325099") //FIX
+            callButton("Call", "+18889660794"),
+            textButton("Go Back", ContactUsMenu.actionName, {})
           ]
         }
       }

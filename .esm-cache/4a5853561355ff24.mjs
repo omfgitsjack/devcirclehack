@@ -11,7 +11,7 @@ const handler = (recipientId, requestPayload) => {
     },
     message: {
       text: `Use a soft tape measure. To obtain your band size measurement, measure very snugly around your rib cage, just underneath your breasts. It should feel tight. Be sure that the tape measure lies straight all the way around.`,
-      quick_replies: [textButton("Back", HowToMeasure.actionName, {})]
+      quick_replies: [textButton("Go Back", HowToMeasure.actionName, {})]
     }
   };
   messenger.callSendAPI(messageData);

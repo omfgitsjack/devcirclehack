@@ -1,4 +1,5 @@
 import Welcome from "./Welcome";
+import MainMenu from "./MainMenu";
 import TellJoke from "./TellJoke";
 
 import GetProductCategories from "./GetProductCategories";
@@ -31,6 +32,8 @@ import LeaveMessage from "./ContactUs/LeaveMessage";
 
 export default {
   [Welcome.actionName]: Welcome.handler,
+  [MainMenu.actionName]: MainMenu.handler,
+
   [TellJoke.actionName]: TellJoke.handler,
   [GetProductCategories.actionName]: GetProductCategories.handler,
   [GetMenOrFemaleProducts.actionName]: GetMenOrFemaleProducts.handler,
