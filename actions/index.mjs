@@ -6,6 +6,7 @@ import GetProductCategories from "./GetProductCategories";
 import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
 import GetProductType from "./GetProductType";
 import NarrowProductType from "./NarrowProductType";
+import GetDiscounts from "./GetDiscounts";
 
 import GetShipping from "./Shipping/GetShipping";
 import CanadianRates from "./Shipping/CanadianRates";
@@ -45,6 +46,7 @@ export default {
   [AmericanRates.actionName]: AmericanRates.handler,
   [Refunds.actionName]: Refunds.handler,
   [ReturnProcess.actionName]: ReturnProcess.handler,
+  [GetDiscounts.actionName]: GetDiscounts.handler,
 
   [BraSizing.actionName]: BraSizing.handler,
   [Bust.actionName]: Bust.handler,

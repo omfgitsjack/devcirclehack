@@ -7,6 +7,7 @@ import GetReturns from "./Returns/GetReturns";
 import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
 import FindYourSizeMenu from "./FindYourSize/FindYourSizeMenu";
 import ContactUsMenu from "./ContactUs/ContactUsMenu";
+import GetDiscounts from "./GetDiscounts";
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {
@@ -22,6 +23,7 @@ const handler = (recipientId, requestPayload) => {
         textButton("Find your size", FindYourSizeMenu.actionName, {}),
         textButton("Shipping", GetShipping.actionName, {}),
         textButton("Returns & Exchanges", GetReturns.actionName, {}),
+        textButton("Discounts", GetDiscounts.actionName, {}),
         textButton("Contact Us", ContactUsMenu.actionName, {})
       ]
     }
