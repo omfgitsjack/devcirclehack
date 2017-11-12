@@ -1,7 +1,7 @@
 import TellJokeActionName from "./TellJoke";
 import messenger from "../services/messenger";
 import textButton from "../replyTemplates/textButton";
-import GetProductCategories from "./GetProductCategories";
+import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {
@@ -10,15 +10,15 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Welcome to Candy Boxx! How can i help you today :)`,
+      text: `Welcome to Candy Boxx! How can I help you today :)`,
       quick_replies: [
-        textButton(
-          "Checkout our products!",
-          GetProductCategories.actionName,
-          {}
-        ),
-        textButton("Get 3 products", "QR_GET_PRODUCT_LIST", { limit: 3 }),
-        textButton("Tell me a joke", TellJokeActionName.actionName, {})
+        textButton("Find a product", GetMenOrFemaleProducts.actionName, {})
+        // textButton(
+        //   "FAQ",
+        // )
+        // textButton("I don't know what to get for my wife")
+        // textButton("Get 3 products", "QR_GET_PRODUCT_LIST", { limit: 3 }),
+        // textButton("Tell me a joke", TellJokeActionName.actionName, {})
       ]
     }
   };
