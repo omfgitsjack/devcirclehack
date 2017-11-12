@@ -22,7 +22,7 @@ const handler = (recipientId, requestPayload) => {
         textButton("Lingerie Sizing", LingerieSizing.actionName, {}),
         textButton("Panties", Panties.actionName, {})
         // urlButton("Learn more!", "https://candyboxx.com/pages/sizing", {}),
-        // urlButton("Back", Welcome.actionName, {})
+        // urlButton("Go Back", Welcome.actionName, {})
       ]
     }
   };

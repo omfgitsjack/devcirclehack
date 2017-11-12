@@ -13,13 +13,19 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Please take a look at our bra sizing chart!`,
-      quick_replies: [
-        textButton("Bust", Bust.actionName, {}),
-        textButton("Chest", Chest.actionName, {}),
-        textButton("Hips", Hips.actionName, {}),
-        textButton("Back", FindYourSizeMenu.actionName, {}) //FIX
-      ]
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: `Take a look at our sizing chart!`,
+          buttons: [
+            textButton("Bust", Bust.actionName, {}),
+            textButton("Chest", Chest.actionName, {}),
+            textButton("Hips", Hips.actionName, {}),
+            textButton("Go Back", FindYourSizeMenu.actionName, {})
+          ]
+        }
+      }
     }
   };
   messenger.callSendAPI(messageData);

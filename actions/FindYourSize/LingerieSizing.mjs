@@ -10,11 +10,11 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Find lingerie that fits right just for you!`, //TODO SHOW CHART
+      text: `Find lingerie that fits right just for you!`,
       quick_replies: [
         textButton("Slim Fit", SlimFit.actionName, {}),
         textButton("Curvy Fit", CurvyFit.actionName, {}),
-        textButton("Back", FindYourSizeMenu.actionName, {})
+        textButton("Go Back", FindYourSizeMenu.actionName, {})
       ]
     }
   };

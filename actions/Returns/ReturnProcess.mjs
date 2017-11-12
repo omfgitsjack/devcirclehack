@@ -8,11 +8,17 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Returns are typically processed within three weeks from you dropping the package in the mail. Please allow 30 days for us to process your request upon receipt.`,
-      quick_replies: [
-        // urlButton("Learn more", "https://candyboxx.com/pages/faq", {}),
-        // urlButton("Go back", "https://candyboxx.com/pages/fa", {}) //FIX
-      ]
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: `Returns are typically processed within three weeks from you dropping the package in the mail. Please allow 30 days for us to process your request upon receipt.`,
+          buttons: [
+            urlButton("Learn more", "https://candyboxx.com/pages/faq"),
+            textButton("Go Back", Welcome.actionName, {})
+          ]
+        }
+      }
     }
   };
   messenger.callSendAPI(messageData);

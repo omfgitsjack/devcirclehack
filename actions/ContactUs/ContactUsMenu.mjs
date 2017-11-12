@@ -4,6 +4,8 @@ import textButton from "../../replyTemplates/textButton";
 import CallUs from "./CallUs";
 import LeaveMessage from "./LeaveMessage";
 
+import Welcome from "../Welcome"
+
 const actionName = "CONTACT_US_MENU";
 const handler = (recipientId, requestPayload) => {
   var messageData = {
@@ -11,11 +13,18 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Feel free to contact us to help serve you better!`,
-      quick_replies: [
-        textButton("Call us now", CallUs.actionName, {}),
-        textButton("Leave a message", LeaveMessage.actionName, {})
-      ]
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: `Feel free to contact us to help serve you better!`,
+          buttons: [
+            textButton("Hours", CallUs.actionName, {}),            
+            callButton("Call Us Now", "+18889660794"),
+            textButton("Go Back", Welcome.actionName, {})
+          ]
+        }
+      }
     }
   };
   messenger.callSendAPI(messageData);

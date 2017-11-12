@@ -10,8 +10,17 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Take a look at our sizing chart!`, //TODO SHOW CHART
-      quick_replies: [textButton("Back", LingerieSizing.actionName, {})]
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: `Take a look at our sizing chart!`,
+          buttons: [
+            urlButton("Click to view", "https://candyboxx.com/pages/sizing"),
+            textButton("Go Back", LingerieSize.actionName, {} )
+          ]
+        }
+      }
     }
   };
   messenger.callSendAPI(messageData);

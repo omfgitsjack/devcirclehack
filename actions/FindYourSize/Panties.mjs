@@ -15,9 +15,10 @@ const handler = (recipientId, requestPayload) => {
         type: "template",
         payload: {
           template_type: "button",
-          text: `Take a look at our panties sizing chart!`, //TODO SHOW CHART
+          text: `Take a look at our panties sizing chart!`,
           buttons: [
-            urlButton("Back", "https://candyboxx.com/pages/sizing") //FIX
+            urlButton("Go Back", "https://candyboxx.com/pages/sizing"),
+            textButton("Go Back", FindYourSizeMenu.actionName, {})
           ]
         }
       }

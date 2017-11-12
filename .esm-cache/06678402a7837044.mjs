@@ -13,7 +13,7 @@ const handler = (recipientId, requestPayload) => {
       text: `Take a look at our bra sizing chart!`, //TODO SHOW CHART
       quick_replies: [
         // textButton("How to Measure", HowToMeasure.actionName, {}),
-        // urlButton("Back", FindYourSizeMenu.actionName, {}), //FIX
+        // urlButton("Go Back", FindYourSizeMenu.actionName, {}), //FIX
       ]
     }
   };

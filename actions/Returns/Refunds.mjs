@@ -8,11 +8,17 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Full priced items may be returned for a full refund but are subject to a $5.95 restocking fee per each returned lingerie set or equivalent.`,
-      quick_replies: [
-        // urlButton("Learn more", "https://candyboxx.com/pages/faq", {}),
-        // urlButton("Go back", "https://candyboxx.com/pages/fa", {}) //FIX
-      ]
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: `Full priced items may be returned for a full refund but are subject to a $5.95 restocking fee per each returned lingerie set or equivalent.`,
+          buttons: [
+            urlButton("Learn more", "https://candyboxx.com/pages/faq"),
+            textButton("Go Back", Welcome.actionName, {})
+          ]
+        }
+      }
     }
   };
   messenger.callSendAPI(messageData);

@@ -11,7 +11,7 @@ const handler = (recipientId, requestPayload) => {
     },
     message: {
       text: `Measure around the fullest portion of your hips and backside.`,
-      quick_replies: [textButton("Back", HowToMeasure.actionName, {})]
+      quick_replies: [textButton("Go Back", HowToMeasure.actionName, {})]
     }
   };
   messenger.callSendAPI(messageData);

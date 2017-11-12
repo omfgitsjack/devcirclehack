@@ -17,7 +17,7 @@ const handler = (recipientId, requestPayload) => {
           template_type: "button",
           text: `Take a look at our panties sizing chart!`, //TODO SHOW CHART
           buttons: [
-            urlButton("Back", "https://candyboxx.com/pages/sizing") //FIX
+            urlButton("Go Back", "https://candyboxx.com/pages/sizing") //FIX
           ]
         }
       }
