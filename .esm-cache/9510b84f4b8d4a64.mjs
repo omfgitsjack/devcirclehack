@@ -1,4 +1,4 @@
-let shopify;_78f‍.w("./shopify",[["default",function(v){shopify=v}]]);
+let shopify;_4b8‍.w("./shopify",[["default",function(v){shopify=v}]]);
 
 let products = null;
 let dTags = {};
@@ -102,7 +102,7 @@ const getProducts = async () => {
   };
 };
 
-_78f‍.d({
+_4b8‍.d({
   getProducts,
   getProductTypeCount,
   getPopularProductTypes,

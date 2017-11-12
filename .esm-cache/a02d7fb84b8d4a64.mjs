@@ -1,44 +1,42 @@
-let messenger;_791‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_791‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_791‍.w("../services/shopify",[["default",function(v){shopify=v}]]);
+let messenger;_4b8‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_4b8‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let shopify;_4b8‍.w("../services/shopify",[["default",function(v){shopify=v}]]);
 
 
 
 const extractData = async () => {
   const productCategories = await shopify.product.list({ limit: 120 });
-  let dTags = {
-  }
+  let dTags = {};
 
-  let dProductType = {
-  }
+  let dProductType = {};
 
   let parsedProducts = productCategories.map(product => {
     return {
       id: product.id,
-      tags: product.tags.split(', '),
+      tags: product.tags.split(", "),
       productType: product.product_type
-    }
-  })
+    };
+  });
 
   parsedProducts.forEach(product => {
     product.tags.forEach(tag => {
       if (dTags[tag]) {
-        dTags[tag].push(product.id)
+        dTags[tag].push(product.id);
       } else {
-        dTags[tag] = [product.id]
+        dTags[tag] = [product.id];
       }
-    })
+    });
 
     if (dProductType[product.productType]) {
-      dProductType[product.productType].push(product.id)
+      dProductType[product.productType].push(product.id);
     } else {
-      dProductType[product.productType] = [product.id]
+      dProductType[product.productType] = [product.id];
     }
-  })
+  });
 
   // console.log(dProductType);
-  console.log(dTags)
+  console.log(dTags);
 };
 
-extractData()
+// extractData()
 
 const actionName = "GetProductCategories";
 const handler = async (recipientId, requestPayload) => {
@@ -65,7 +63,7 @@ const handler = async (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-_791‍.d({
+_4b8‍.d({
   actionName,
   handler
 });

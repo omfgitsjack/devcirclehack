@@ -15,15 +15,8 @@ const handler = (recipientId, requestPayload) => {
       id: recipientId
     },
     message: {
-      text: `Welcome to Candy Boxx! How can I help you today? :)`,
+      text: `Welcome to CandyBoxx! My name is Audrey, how can I help you today? :)`,
       quick_replies: [
-        textButton(
-          "Checkout our products!",
-          GetProductCategories.actionName,
-          {}
-        ),
-        // textButton("Get 3 products", "QR_GET_PRODUCT_LIST", { limit: 3 }),
-        // textButton("Tell me a joke", TellJokeActionName.actionName, {}),
         textButton("Find a product", GetMenOrFemaleProducts.actionName, {}),
         textButton("Shipping", GetShipping.actionName, {}),
         textButton("Returns & Exchanges", GetReturns.actionName, {}),
