@@ -1,5 +1,5 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_027‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_027‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);
+
 
 const actionName = "RETURN_PROCESS";
 const handler = (recipientId, requestPayload) => {
@@ -18,7 +18,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_027‍.d({
   actionName,
   handler
-};
+});

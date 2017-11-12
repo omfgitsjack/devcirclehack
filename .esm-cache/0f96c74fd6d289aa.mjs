@@ -1,10 +1,10 @@
-import TellJokeActionName from "./TellJoke";
-import messenger from "../services/messenger";
-import textButton from "../replyTemplates/textButton";
-import GetProductCategories from "./GetProductCategories";
-import GetShipping from "./Shipping/GetShipping";
-import GetReturns from "./Returns/GetReturns";
-import GetMenOrFemaleProducts from "./GetMenOrFemaleProducts";
+let TellJokeActionName;_d6d‍.w("./TellJoke",[["default",function(v){TellJokeActionName=v}]]);let messenger;_d6d‍.w("../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_d6d‍.w("../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let GetProductCategories;_d6d‍.w("./GetProductCategories",[["default",function(v){GetProductCategories=v}]]);let GetShipping;_d6d‍.w("./Shipping/GetShipping",[["default",function(v){GetShipping=v}]]);let GetReturns;_d6d‍.w("./Returns/GetReturns",[["default",function(v){GetReturns=v}]]);let GetMenOrFemaleProducts;_d6d‍.w("./GetMenOrFemaleProducts",[["default",function(v){GetMenOrFemaleProducts=v}]]);
+
+
+
+
+
+
 
 const actionName = "Welcome";
 const handler = (recipientId, requestPayload) => {
@@ -34,7 +34,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_d6d‍.d({
   actionName,
   handler
-};
+});

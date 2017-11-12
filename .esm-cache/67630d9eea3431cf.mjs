@@ -1,8 +1,8 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_ea3‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_ea3‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let ReturnProcess;_ea3‍.w("./ReturnProcess",[["default",function(v){ReturnProcess=v}]]);let Refunds;_ea3‍.w("./Refunds",[["default",function(v){Refunds=v}]]);
 
-import ReturnProcess from "./ReturnProcess";
-import Refunds from "./Refunds";
+
+
+
 
 const actionName = "RETURNS";
 const handler = (recipientId, requestPayload) => {
@@ -23,7 +23,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_ea3‍.d({
   actionName,
   handler
-};
+});

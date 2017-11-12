@@ -1,14 +1,14 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_48a‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_48a‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);
 
-const actionName = "RETURN_PROCESS";
+
+const actionName = "REFUNDS";
 const handler = (recipientId, requestPayload) => {
   var messageData = {
     recipient: {
       id: recipientId
     },
     message: {
-      text: `Returns are typically processed within three weeks from you dropping the package in the mail. Please allow 30 days for us to process your request upon receipt.`,
+      text: `Full priced items may be returned for a full refund but are subject to a $5.95 restocking fee per each returned lingerie set or equivalent.`,
       quick_replies: [
         // urlButton("Learn more", "https://candyboxx.com/pages/faq", {}),
         // urlButton("Go back", "https://candyboxx.com/pages/fa", {}) //FIX
@@ -18,7 +18,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_48a‍.d({
   actionName,
   handler
-};
+});

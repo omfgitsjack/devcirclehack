@@ -1,7 +1,7 @@
-import messenger from "../../services/messenger";
-import textButton from "../../replyTemplates/textButton";
+let messenger;_2b0‍.w("../../services/messenger",[["default",function(v){messenger=v}]]);let textButton;_2b0‍.w("../../replyTemplates/textButton",[["default",function(v){textButton=v}]]);let GetShipping;_2b0‍.w("./GetShipping",[["default",function(v){GetShipping=v}]]);
 
-import GetShipping from "./GetShipping";
+
+
 
 const actionName = "AMERICAN_RATES";
 const handler = (recipientId, requestPayload) => {
@@ -20,7 +20,7 @@ const handler = (recipientId, requestPayload) => {
   messenger.callSendAPI(messageData);
 };
 
-export default {
+_2b0‍.d({
   actionName,
   handler
-};
+});
